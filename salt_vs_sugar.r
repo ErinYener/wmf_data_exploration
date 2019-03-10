@@ -149,11 +149,6 @@ time_between_revs_hist <- ggplot(quarry_results, aes(time_between_revs, color = 
 
 plot(time_between_revs_hist)
 
----
-
-fivenum(quarry_results_salt$time_between_revs)
-fivenum(quarry_results_sugar$time_between_revs)
-
 ### Revision Length Plot ###
 
 revision_len_plot <- ggplot(quarry_results, aes(x = page_title, y = length_rev_id, color = page_title, fill = page_title)) +
@@ -165,8 +160,3 @@ revision_len_plot <- ggplot(quarry_results, aes(x = page_title, y = length_rev_i
   theme(legend.position = 'bottom')
 
 plot(revision_len_plot)
-
----
-
-fivenum(quarry_results_salt$length_rev_id)
-fivenum(quarry_results_sugar$length_rev_id)
